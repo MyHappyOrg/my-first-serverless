@@ -6,7 +6,7 @@
 // })
 // module.exports.server = sls(app)
 
-
+//Updated
 module.exports.server = (event, context, callback) => {
   const response = {
     statusCode: 200,
