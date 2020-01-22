@@ -65,7 +65,15 @@ functions:
     events: # events trigger lambda functions
       - http: # this is an API Gateway HTTP event trigger
           path: /
-          method: GET
+          method: post
+          cors: true
+      - sqs: arn:aws:sqs:us-east-1:611723861088:myfirstquene
+  hello1:
+    handler: app.server1
+    events: # events trigger lambda functions
+      - http: # this is an API Gateway HTTP event trigger
+          path: /
+          method: get
           cors: true
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
